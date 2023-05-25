@@ -1,8 +1,9 @@
 {
   "name": "casa-de-cambio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Website de conversão de moeda",
+  "main": "index.html",
+  "type": "module",
   "scripts": {
     "dev": "vite --open"
   },
@@ -14,6 +15,5 @@
   },
   "devDependencies": {
     "eslint": "^8.41.0"
-  },
-  "type": "module"
+  }
 }
