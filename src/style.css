@@ -24,6 +24,10 @@ body {
   align-items: center;
 }
 
+.container header h1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 header form {
   display: flex;
   max-width: 324px;
@@ -56,16 +60,24 @@ header form button:hover {
   filter: brightness(90%);
 }
 
+.exemplo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container main {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 152px);
 }
 
 main h2 {
   text-transform: uppercase;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 main ul {
@@ -89,7 +101,60 @@ main ul li {
 }
 
 main ul li:hover {
-  transform: translateY(-10px) scale(120%);
+  transform: translateY(-8px) scale(110%);
   border-color: #4AC7FA;
 }
 
+div .swal2-modal {
+  border-radius: 4px;
+  background-color: #2f2f32;
+  color: #EAEAEA;
+}
+
+@media(max-width: 1350px) {
+  .container main ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width: 900px) {
+  .container main ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 675px) {
+  .container header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .container header h1 {
+    font-size: 24px;
+  }
+
+  .container header form {
+    margin-top: 16px;
+    max-width: 50%;
+  }
+
+  .container main h2 {
+    font-size: 18px;
+  }
+
+  .container main ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container main ul li:hover {
+    transform: translateY(-4px) scale(1.1);
+  }
+}
+
+@media(max-width: 400px) {
+  .container main ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
